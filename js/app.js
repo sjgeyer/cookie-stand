@@ -8,4 +8,34 @@ var firstAndPike = {
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
+  custPerHour: [],
+  calcCustPerHour: function(){
+    for(var i = 0; i < hours.length; i++) {
+      this.custPerHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+    }
+  },
+  cookiesPerHour: [],
+  calcCookiesPerHour: function(){
+    for(var j = 0; j < this.custPerHour.length; j++) {
+      this.cookiesPerHour.push(Math.floor(this.custPerHour[j] * this.avgCookie));
+    }
+  },
+  render: function() {
+    var ulEl = document.getElementById('pike');
+    for (var k = 0; k < this.cookiesPerHour.length; k++) {
+      //create element
+      var liEl = document.createElement('li');
+
+      //give it content
+      liEl.textContent = hours[k] + ': ' + this.cookiesPerHour[k] + ' cookies';
+
+      //append to DOM
+      ulEl.appendChild(liEl);
+    }
+  }
 };
+
+firstAndPike.calcCustPerHour();
+firstAndPike.calcCookiesPerHour();
+firstAndPike.render();
+console.log(firstAndPike);
