@@ -8,4 +8,20 @@ var firstAndPike = {
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
+  custPerHour: [],
+  calcCustPerHour: function(){
+    for(var i = 0; i < hours.length; i++) {
+      this.custPerHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+    }
+  },
+  cookiesPerHour: [],
+  calcCookiesPerHour: function(){
+    for(var j = 0; j < this.custPerHour.length; j++) {
+      this.cookiesPerHour.push(Math.floor(this.custPerHour[j] * this.avgCookie));
+    }
+  }
 };
+
+firstAndPike.calcCustPerHour();
+firstAndPike.calcCookiesPerHour();
+console.log(firstAndPike);
