@@ -1,0 +1,33 @@
+body {
+}
+
+h1 {
+  font-family: 'Michroma', sans-serif;
+}
+
+h2 {
+  font-family: sans-serif;
+  margin-top: 60px;
+}
+
+table, th, td {
+  border: 1px dashed black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+th {
+  background-color: salmon;
+  border: 1px solid black;
+}
+
+table {
+  border: 1px solid black;
+  margin: 40px;
+}
+
+.peak {
+  background-color: aquamarine;
+}
