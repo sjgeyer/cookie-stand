@@ -1,0 +1,100 @@
+#seattle {
+  max-width: 100%;
+  position: absolute;
+}
+
+ul {
+  background-color: black;
+  padding: 10px;
+}
+
+ul li {
+  display: inline;
+  background-color: black;
+  font: bold 20px;
+  font-family: 'Michroma', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color:white;
+  text-decoration: none;
+}
+
+.header{
+  position: relative;
+  max-width: 100%;
+}
+
+.top-right{
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: white;
+  font-size: 70px;
+  font-family: 'Homemade Apple', cursive;
+}
+
+#salmon {
+  max-width: 10%;
+  display: inline;
+}
+
+.bottom-right{
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Kavivanar', cursive;
+}
+
+.about {
+  margin-top: 680px;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Michroma', sans-serif;
+  color: black;
+  font-size: 60px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+p {
+  font-family: 'Kavivanar', cursive;
+}
+
+#pat {
+  max-height: 300px;
+  padding: 10px;
+  padding-left: 75px;
+}
+
+#fishing {
+  max-height: 300px;
+  padding: 10px;
+}
+
+.left {
+  background-color: grey;
+  float: left;
+  padding: 40px;
+  max-width: 50%;
+}
+
+.right{
+  max-width: 50%;
+  padding: 50px;
+  padding-right: 100px;
+  float: right;
+  line-height: 20px;
+  background-color: salmon;
+}
