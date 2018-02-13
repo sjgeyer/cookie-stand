@@ -1,4 +1,5 @@
 body {
+  background-color: #c98252;
 }
 
 h1 {
@@ -12,6 +13,7 @@ h2 {
 
 table, th, td {
   border: 1px dashed black;
+  background-color: white;
   border-collapse: collapse;
   text-align: center;
   padding: 5px;
@@ -30,4 +32,19 @@ table {
 
 .peak {
   background-color: aquamarine;
+}
+
+#staff {
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: sans-serif;
+  font-style: italic;
+  margin-left: 40px;
+}
+
+img {
+  clear: right;
+  max-width: 300px;
 }
