@@ -237,6 +237,3 @@ alki.calcCustPerHour();
 alki.calcCookiesPerHour();
 alki.calcTotal();
 alki.render();
-
-
-console.log(firstAndPike);
