@@ -1,9 +1,4 @@
-/* header photo and text!! */
-#seattle {
-  max-width: 100%;
-  position: absolute;
-}
-
+/* nav bar */
 ul {
   background-color: black;
   padding: 10px;
@@ -27,9 +22,15 @@ a:visited{
   text-decoration: none;
 }
 
+/* header photo and text!! */
 .header{
   position: relative;
   max-width: 100%;
+}
+
+#seattle {
+  max-width: 100%;
+  position: absolute;
 }
 
 .top-right{
@@ -50,25 +51,46 @@ a:visited{
   font-family: 'Kavivanar', cursive;
 }
 
-
-
-.about {
-  margin-top: 680px;
-  position: relative;
+#salmon {
+  position: absolute;
+  top: 0px;
+  right: 550px;
+  max-width: 30%;
 }
 
+/* lower down stuff */
 h2 {
   font-family: 'Michroma', sans-serif;
   color: black;
   font-size: 60px;
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
 }
 
-p {
-  font-family: 'Kavivanar', cursive;
+.about {
+  position: absolute;
+  overflow: auto;
+  transform: translateY(170%);
+  margin: 50px;
 }
+
+#about {
+  clear: right;
+  display: inline;
+  padding: 10px;
+}
+.info {
+  font-family: 'Kavivanar', cursive;
+  clear: right;
+  display: inline;
+  font-size: 24px;
+}
+
+#coffeepic {
+  max-width: 50%;
+  float: right;
+  margin-right: 40px;
+  margin-left: 60px;
+}
+
 
 /* #pat {
   max-height: 300px;

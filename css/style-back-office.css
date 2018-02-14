@@ -1,18 +1,19 @@
 body {
-  background-color: #c98252;
+  background-color: #50361b;
 }
 
 h1 {
   font-family: 'Michroma', sans-serif;
+  color: white;
 }
 
 h2 {
   font-family: sans-serif;
   margin-top: 60px;
+  color: white;
 }
 
 table, th, td {
-  border: 1px dashed black;
   background-color: white;
   border-collapse: collapse;
   text-align: center;
@@ -22,7 +23,6 @@ table, th, td {
 
 th {
   background-color: salmon;
-  border: 1px solid black;
 }
 
 table {
@@ -42,6 +42,7 @@ p {
   font-family: sans-serif;
   font-style: italic;
   margin-left: 40px;
+  color: white;
 }
 
 img {
