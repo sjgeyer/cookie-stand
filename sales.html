@@ -5,13 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Back Office</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/style-back-office.css" />
   <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Kavivanar|Michroma" rel="stylesheet">
 </head>
 <body>
   <h1>Pat's Salmon Cookies - Back Office</h1>
   <img src="img/salmon.png" alt="salmon" title="Salmon!">
+
+      <form id="submitForm">
+        <fieldset>
+          <legend>Enter New Store Data:</legend>
+          
+          <label for="inputName">Name of store: </label>
+          <input name="inputName" type="text"> </br>
+          
+          <label for="inputMinCust">Minimum customers per hour: </label>
+          <input name="inputMinCust" type="text"></br>
+
+          <label for="inputMaxCust">Maximum customers per hour: </label>
+          <input name="inputMaxCust" type="text"></br>
+
+          <label for="inputAvgCookie">Average cookies bought per customer: </label>
+          <input name="inputAvgCookie" type="text"></br>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+
   <h2>Cookies Needed Per Hour</h2>  
     <table id="cookies">
     </table>
