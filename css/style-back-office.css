@@ -1,16 +1,21 @@
 body {
   background-color: #50361b;
+  font-family: sans-serif;
 }
 
 h1 {
   font-family: 'Michroma', sans-serif;
   color: white;
+  font-size: 28px;
+  margin: 20px;
 }
 
 h2 {
   font-family: sans-serif;
   margin-top: 60px;
   color: white;
+  font-size: 20px;
+  padding: 20px;
 }
 
 table, th, td {
@@ -23,6 +28,7 @@ table, th, td {
 
 th {
   background-color: salmon;
+  font-weight: bold;
 }
 
 table {
@@ -34,6 +40,10 @@ table {
   background-color: aquamarine;
 }
 
+.total {
+  font-weight: bold;
+}
+
 #staff {
   margin-bottom: 0px;
 }
@@ -41,6 +51,8 @@ table {
 p {
   font-family: sans-serif;
   font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 20px;
   margin-left: 40px;
   color: white;
 }
@@ -48,4 +60,19 @@ p {
 img {
   clear: right;
   max-width: 300px;
+  margin-left: 20px;
+}
+
+form {
+  color: white;
+}
+
+fieldset {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+input {
+  margin: 5px;
 }
