@@ -1,7 +1,7 @@
 //use strict declaration
 'use strict';
 
-//arrays
+//global variables
 var hours = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM'];
 var allStores = [];
 var allStoreHourTotal = [];
@@ -97,7 +97,7 @@ CookieStand.prototype.renderStaff = function() {
   trEl.appendChild(tdEl);
 };
 
-//calc totals by hour and day
+//calc column totals
 function calcAllStoreHrTotal() {
   allStoreHourTotal = [];
   allStoreDayTotal = 0;
@@ -217,8 +217,10 @@ new CookieStand('Seattle Center', 11, 38, 3.7);
 new CookieStand('Capitol Hill', 20, 38, 2.3);
 new CookieStand('Alki', 2, 16, 4.6);
 
+//rendering!!
 renderAll();
 
+//event handler
 function formSubmit() {
   //prevents reload
   event.preventDefault();
@@ -254,4 +256,5 @@ function formSubmit() {
   event.target.reset();
 }
 
+//event listener
 submitButton.addEventListener('submit', formSubmit);
