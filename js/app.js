@@ -21,19 +21,20 @@ function CookieStand(name, minCust, maxCust, avgCookie) {
   this.totalTossers = 0;
   this.cookiesPerHour = [];
   this.totalCookies = 0;
-  this.calcCustPerHour();
-  this.calcCookiesPerHour();
-  this.calcTossersPerHour();
   allStores.push(this);
 }
 
 CookieStand.prototype.calcCustPerHour = function(){
+  this.custPerHour = [];
   for(var i = 0; i < hours.length; i++) {
     this.custPerHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
   }
 };
 
 CookieStand.prototype.calcCookiesPerHour = function(){
+  this.calcCustPerHour();
+  this.totalCookies = 0;
+  this.cookiesPerHour = [];
   for(var i = 0; i < this.custPerHour.length; i++) {
     var oneHourCookies = Math.ceil(this.custPerHour[i] * this.avgCookie);
     this.cookiesPerHour.push(oneHourCookies);
@@ -42,6 +43,9 @@ CookieStand.prototype.calcCookiesPerHour = function(){
 };
 
 CookieStand.prototype.calcTossersPerHour = function () {
+  this.calcCookiesPerHour();
+  this.totalTossers = 0;
+  this.tossersPerHour = [];
   for(var i = 0; i < this.custPerHour.length; i++) {
     var oneHourTossers = Math.ceil(this.custPerHour[i] / 20);
     if (oneHourTossers < 2) {
@@ -53,6 +57,7 @@ CookieStand.prototype.calcTossersPerHour = function () {
 };
 
 CookieStand.prototype.renderCookies = function() {
+  this.calcTossersPerHour();
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   var tableEl = document.getElementById('cookies');
@@ -218,18 +223,35 @@ function formSubmit() {
   //prevents reload
   event.preventDefault();
   //prevents empty fields
-  if (!event.target.inputName.value || !event.target.inputMinCust.value || !event.target.inputMaxCust.value || !event.target.inputAvgCookie.value) {
+  if(!event.target.inputName.value || !event.target.inputMinCust.value || !event.target.inputMaxCust.value || !event.target.inputAvgCookie.value) {
     return alert('Please fill all fields!');
   }
+
   //defining values
   var inputName = event.target.inputName.value;
   var inputMinCust = parseInt(event.target.inputMinCust.value);
   var inputMaxCust = parseInt(event.target.inputMaxCust.value);
   var inputAvgCookie = Number(event.target.inputAvgCookie.value);
 
+  //prevents invalid min/max values!
+  if (inputMaxCust < inputMinCust) {
+    return alert('Maximum cannot be less than minimum!');
+  }
+
   new CookieStand(inputName, inputMinCust, inputMaxCust, inputAvgCookie);
-  event.target.reset();
+
+  //checks if already a store in table
+  for(var i = 0; i < allStores.length - 1; i++){
+    if(inputName === allStores[i].name) {
+      allStores[i].minCust = inputMinCust;
+      allStores[i].maxCust = inputMaxCust;
+      allStores[i].avgCookie = inputAvgCookie;
+      allStores.pop();
+    }
+  }
+
   renderAll();
+  event.target.reset();
 }
 
 submitButton.addEventListener('submit', formSubmit);
