@@ -36,6 +36,30 @@ table {
   margin: 40px;
 }
 
+/* nav bar */
+ul {
+  background-color: black;
+  padding: 1vw;
+}
+
+ul li {
+  display: inline;
+  background-color: black;
+  font: bold 1.5vw;
+  font-family: 'Michroma', sans-serif;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color:white;
+  text-decoration: none;
+}
+
 .peak {
   background-color: aquamarine;
 }

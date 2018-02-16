@@ -9,6 +9,10 @@ var allStoreDayTotal = 0;
 var allTosserHourTotal = [];
 var allDayTosserTotal = 0;
 var submitButton = document.getElementById('submitForm');
+var cookieTable = document.getElementById('cookies');
+var staffTable = document.getElementById('staff');
+var trEl = document.createElement('tr');
+var tdEl = document.createElement('td');
 
 //constructor function
 function CookieStand(name, minCust, maxCust, avgCookie) {
@@ -58,10 +62,10 @@ CookieStand.prototype.calcTossersPerHour = function () {
 
 CookieStand.prototype.renderCookies = function() {
   this.calcTossersPerHour();
-  var trEl = document.createElement('tr');
-  var tdEl = document.createElement('td');
-  var tableEl = document.getElementById('cookies');
-  tableEl.appendChild(trEl);
+  trEl = document.createElement('tr');
+  tdEl = document.createElement('td');
+  cookieTable = document.getElementById('cookies');
+  cookieTable.appendChild(trEl);
   tdEl.textContent = this.name;
   trEl.appendChild(tdEl);
   for (var i = 0; i < this.cookiesPerHour.length; i++) {
@@ -96,6 +100,9 @@ CookieStand.prototype.renderStaff = function() {
   tdEl.textContent = this.totalTossers;
   trEl.appendChild(tdEl);
 };
+
+//make new row function
+
 
 //calc column totals
 function calcAllStoreHrTotal() {
@@ -197,8 +204,6 @@ function makeStaffFooterRow () {
 
 //render function
 function renderAll() {
-  var cookieTable = document.getElementById('cookies');
-  var staffTable = document.getElementById('staff');
   cookieTable.textContent = '';
   staffTable.textContent = '';
   makeCookiesHeaderRow();
@@ -221,21 +226,22 @@ new CookieStand('Alki', 2, 16, 4.6);
 renderAll();
 
 //event handler
-function formSubmit() {
+function formSubmit(event) {
   //prevents reload
   event.preventDefault();
-  //prevents empty fields
-  if(!event.target.inputName.value || !event.target.inputMinCust.value || !event.target.inputMaxCust.value || !event.target.inputAvgCookie.value) {
-    return alert('Please fill all fields!');
-  }
 
   //defining values
   var inputName = event.target.inputName.value;
   var inputMinCust = parseInt(event.target.inputMinCust.value);
   var inputMaxCust = parseInt(event.target.inputMaxCust.value);
-  var inputAvgCookie = Number(event.target.inputAvgCookie.value);
+  var inputAvgCookie = parseFloat(event.target.inputAvgCookie.value);
 
-  //prevents invalid min/max values!
+  //prevents empty fields
+  if(!inputName || !inputMinCust || !inputMaxCust || !inputAvgCookie) {
+    return alert('Please fill all fields!');
+  }
+
+  //prevents invalid min/max values
   if (inputMaxCust < inputMinCust) {
     return alert('Maximum cannot be less than minimum!');
   }
@@ -245,6 +251,7 @@ function formSubmit() {
   //checks if already a store in table
   for(var i = 0; i < allStores.length - 1; i++){
     if(inputName === allStores[i].name) {
+      //reassign properties
       allStores[i].minCust = inputMinCust;
       allStores[i].maxCust = inputMaxCust;
       allStores[i].avgCookie = inputAvgCookie;
@@ -258,3 +265,9 @@ function formSubmit() {
 
 //event listener
 submitButton.addEventListener('submit', formSubmit);
+
+//to calculate only one row
+//1. reassign values
+//2. set all values back to zero/empty
+//3. recalculate
+//4. re-render
