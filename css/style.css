@@ -1,126 +1,125 @@
 /* nav bar */
 ul {
   background-color: black;
-  padding: 1vw;
+  padding: 0.5vw;
 }
 
 ul li {
   display: inline;
   background-color: black;
   font: bold 1.5vw;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
 a:link {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:visited{
-  color:white;
+  color:#FFFFFF;
   text-decoration: none;
 }
 
-/* header photo and text!! */
-.header{
+/* header */
+header{
   position: relative;
-  background-image: url(../img/seattle.jpg);
+  background-image: url(../img/bakery.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   max-width: 100%;
   height:0;
-  padding: 53%;
+  padding: 55%;
   padding-right: 0%;
   padding-bottom: 0%;
 }
 
-.top-right{
+h1 {
   position: absolute;
-  top: 4vw;
-  right: 2vw;
-  font-size: 6vw;
-  font-family: 'Homemade Apple', cursive;
-  color: white;
+  top: 0vw;
+  text-align: center;
+  padding: 0vw;
+  left: 5vw;
+  font-size: 15vw;
+  font-family: 'Amatic SC', cursive;
+  color: #FFFFFF;
+  margin-top: 4vw;
 }
 
-.bottom-right{
-  position: absolute;
-  top: 11vw;
-  right: 2vw;
-  font-size: 2vw;
-  font-family: 'Kavivanar', cursive;
-  color: white;
-}
-
-#salmon {
-  position: absolute;
-  top: 5vw;
-  right: 11vw;
-  max-width: 30%;
-}
-
-/* lower down stuff */
+/* general */
 h2 {
-  font-family: 'Michroma', sans-serif;
-  color: black;
-  font-size: 60px;
+  font-family: 'Amatic SC', cursive;;
+  color: #000000;
+  font-size: 9vw;
+  padding: 3vw;
+  text-align: right;
 }
 
-.about {
-  margin: 5vw;
-  margin-top: 2vw;
+p {
+  font-family: 'Maven Pro', sans-serif;
+  padding: 3vw;
+  font-size: 1.7vw;
 }
 
+/* about */
 #about {
-  clear: right;
-  display: inline;
+  height: 27vw;
+  margin-top: 10px;
 }
 
-.info {
-  font-family: 'Kavivanar', cursive;
-  clear: right;
-  display: inline;
-  font-size: 24px;
-}
-
-#coffeepic {
-  width: 500px;
-  max-width: 90%;
-  float: right;
-  margin-top: 9vw;
-  margin-left: 3vw;
-  margin-bottom: 5vw;
-}
-
-
-/* #pat {
-  max-height: 300px;
-  padding: 10px;
-  padding-left: 75px;
-}
-
-#fishing {
-  max-height: 300px;
-  padding: 10px;
-}
-
-.left {
-  background-color: grey;
+.column1of3 {
   float: left;
-  padding: 40px;
-  max-width: 50%;
+  width: 30%;
 }
 
-.right{
-  max-width: 50%;
-  padding: 50px;
-  padding-right: 100px;
-  float: right;
-  line-height: 20px;
-  background-color: salmon;
-} */
+.column2of3 {
+  float: left;
+  width: 30%;
+}
 
+.column3of3 {
+  float: left;
+  width: 30%;
+}
 
+#chinook {
+  padding-right: 3vw;
+  padding-top: 5vw;
+  max-width: 30vw;
+}
 
-#50361b
+/* products */
+#products {
+  background-color: #471c01;
+}
+
+#cutter, #shirt, #cookie {
+  margin-top: 3vw;
+  height: 20vw;
+  max-width: 30%;
+  vertical-align: top;
+  margin-bottom: 3vw;
+}
+
+#products h2 {
+  color: #FFFFFF;
+}
+
+#products p {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.column1of2 {
+  float: left;
+  width: 30%;
+}
+
+.column2of2 {
+  float: left;
+  width: 70%;
+  max-height: 40vw;
+}
+
+/* locations */
