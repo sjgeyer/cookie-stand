@@ -1,21 +1,23 @@
 body {
-  background-color: #50361b;
-  font-family: sans-serif;
+  background-color: #471c01;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 h1 {
-  font-family: 'Michroma', sans-serif;
-  color: white;
-  font-size: 28px;
-  margin: 20px;
+  text-align: center;
+  font-size: 15vw;
+  font-family: 'Amatic SC', cursive;
+  color: #FFFFFF;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
 }
 
 h2 {
-  font-family: sans-serif;
-  margin-top: 60px;
+  font-family: 'Julius Sans One', sans-serif;
+  margin: 20px;
   color: white;
   font-size: 20px;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 table, th, td {
@@ -23,7 +25,7 @@ table, th, td {
   border-collapse: collapse;
   text-align: center;
   padding: 5px;
-  font-family: sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 th {
@@ -34,29 +36,30 @@ th {
 table {
   border: 1px solid black;
   margin: 40px;
+  margin-top: 10px;
 }
 
 /* nav bar */
 ul {
   background-color: black;
-  padding: 1vw;
+  padding: 0.5vw;
 }
 
 ul li {
   display: inline;
   background-color: black;
   font: bold 1.5vw;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
 a:link {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:visited{
-  color:white;
+  color:#FFFFFF;
   text-decoration: none;
 }
 
@@ -73,10 +76,10 @@ a:visited{
 }
 
 p {
-  font-family: sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-style: italic;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-left: 40px;
   color: white;
 }
