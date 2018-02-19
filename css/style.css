@@ -157,14 +157,15 @@ p {
   margin: 1.5vw;
 }
 
+/* footer */
+footer {
+  background-color: #471c01;
+  height: 30vw;
+}
+
 .picture {
   float: left;
   width: 30%;
-}
-
-#footer {
-  background-color: #471c01;
-  height: 30vw;
 }
 
 #fishpicture {
@@ -201,8 +202,13 @@ h3 {
   padding: 3vw;
 }
 
+.learn h3 {
+  font-size: 1.7vw;
+}
+
 .learn ul li {
-  font: bold 1.5vw;
+  font-weight: bold;
+  font-size: 1.5vw;
   font-family: 'Julius Sans One', sans-serif;
   color: #FFFFFF;
   margin-left: 4vw;
