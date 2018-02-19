@@ -76,7 +76,6 @@ CookieStand.prototype.renderStaff = function() {
   newElement('td', this.name, trEl);
   for (var i = 0; i < this.cookiesPerHour.length; i++) {
     newElement('td', this.tossersPerHour[i], trEl);
-    //missing peak element highlight!
   }
   newElement('td', this.totalTossers, trEl, 'total');
 };
